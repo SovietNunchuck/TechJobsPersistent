@@ -1,15 +1,19 @@
 ﻿<div class="container body-content">
     <h1>@ViewBag.title</h1>
-    <h2 class="centered">View Jobs By Category</h2>
+    <h2 style="text-align:center;">View Jobs By Category</h2>
 </div>
 
-<table class="centeredTable">
+<table class="table">
+    <colgroup>
+        <col span="1" style="width:50%">
+        <col span="1" style="width:50%">
+    </colgroup>
     <tr>
         @foreach (var column in ViewBag.columns)
         {
             @if (column.Key != "all")
             {
-                <th>@column.Value</th>
+                <th style="text-align:center;">@column.Value</th>
             }
         }
     </tr>

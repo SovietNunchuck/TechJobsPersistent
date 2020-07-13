@@ -73,3 +73,11 @@ body {
 .field-validation-error {
     color: red;
 }
+
+td, th {
+    padding: 10px;
+}
+
+th {
+    background-color: #e4e4e4;
+}
