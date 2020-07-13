@@ -39,8 +39,8 @@ namespace TechJobsPersistent.Controllers
         {
             ViewBag.columns = ColumnChoices;
             ViewBag.tablechoices = TableChoices;
-            ViewBag.employers = context.Employers.ToList();
-            ViewBag.skills = context.Skills.ToList();
+            ViewBag.employers = context.Employers.OrderBy(o => o.Name).ToList();
+            ViewBag.skills = context.Skills.OrderBy(o => o.Name).ToList();
             return View();
         }
 

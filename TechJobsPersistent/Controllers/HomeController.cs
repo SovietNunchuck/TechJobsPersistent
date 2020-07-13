@@ -25,8 +25,9 @@ namespace TechJobsPersistent.Controllers
         public IActionResult Index()
         {
             List<Job> jobs = context.Jobs.Include(j => j.Employer).ToList();
+            List<Job> orderedJobs = jobs.OrderBy(o => o.Name).ToList();
 
-            return View(jobs);
+            return View(orderedJobs);
         }
 
         [HttpGet("/Add")]
